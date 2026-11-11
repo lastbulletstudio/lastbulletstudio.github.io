@@ -1,0 +1,1 @@
+for(let e of document.querySelectorAll(`[data-video]`))e.querySelector(`button`)?.addEventListener(`click`,()=>{let t=document.createElement(`iframe`);t.src=e.dataset.video??``,t.title=e.dataset.title??`Video`,t.allow=`autoplay; encrypted-media; picture-in-picture; fullscreen`,t.allowFullscreen=!0,t.className=`absolute inset-0 h-full w-full border-0`,e.replaceChildren(t)});

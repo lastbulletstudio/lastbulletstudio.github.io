@@ -1,0 +1,12 @@
+# Security headers for every page and file (Cloudflare static assets).
+# Scripts run only from this site, plus Cloudflare's anti-spam widget on the contact form.
+# Frames: the YouTube / Vimeo players (after the visitor presses play) and the anti-spam widget.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self' https://cdn.sanity.io; frame-src https://www.youtube-nocookie.com https://player.vimeo.com https://challenges.cloudflare.com; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'
+
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable

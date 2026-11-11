@@ -1,0 +1,1 @@
+var e=document.querySelector(`[data-nav-toggle]`),t=document.querySelector(`[data-nav]`);if(e&&t){let n=n=>{e.setAttribute(`aria-expanded`,String(n)),t.toggleAttribute(`data-open`,n)};e.addEventListener(`click`,()=>n(e.getAttribute(`aria-expanded`)!==`true`)),document.addEventListener(`keydown`,t=>{t.key===`Escape`&&e.getAttribute(`aria-expanded`)===`true`&&(n(!1),e.focus())})}
